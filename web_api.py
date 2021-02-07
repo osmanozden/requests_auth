@@ -19,8 +19,6 @@ def oturum():
         
         kullanici_bilgi['csrf_token'] = soup.find("input" , attrs={'name' :  'csrf_token'})['value']
         
-        #rint(kullanici_bilgi)
-        
         url = 'https://www.itemsatis.com/api/login.html'
         
         giris = s1.post(url,data=kullanici_bilgi,headers=headers)
